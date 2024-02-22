@@ -16,7 +16,7 @@ class Kiosk:
             print(i + 1, self.menu[i], ' : ', self.price[i], '원')
 
     # 주문 메서드
-    # 추가 음료의 온도를 입력받고, 가격 리스트와 주문 리스트, 합계 금액을 업데이트합니다. 
+    # 추가 음료의 온도를 입력받고, 가격 리스트와 주문 리스트, 합계 금액을 업데이트
     def menu_select(self):
         n = 0
         while n < 1 or len(menu) < n:
@@ -24,7 +24,7 @@ class Kiosk:
 
             # 메뉴판에 있는 음료 번호일 때
             if 1 <= n & n <= len(menu):
-                self.order_price.append(self.price[n-1])  # 가격 리스트에 추가합니다.
+                self.order_price.append(self.price[n-1])  # 가격 리스트에 추가.
                 self.price_sum = self.price[n-1]  # 합계 금액
             # 메뉴판에 없는 번호일 때
             else:  
@@ -41,11 +41,11 @@ class Kiosk:
             else:    
                 print("1과 2 중 하나를 입력하세요.\n")
 
-        self.order_menu.append(self.temp + ' ' + self.menu[n-1])  # 주문 리스트에 추가합니다.
-        print(self.temp, self.menu[n-1], ' : ', self.price[n-1], '원')  # 온도 속성을 추가한 주문 결과를 출력합니다.
+        self.order_menu.append(self.temp + ' ' + self.menu[n-1])  # 주문 리스트에 추가
+        print(self.temp, self.menu[n-1], ' : ', self.price[n-1], '원')  # 온도 속성을 추가한 주문 결과를 출력
 
         # 추가 주문 또는 지불
-        while n != 0:  # 지불을 선택하기 전까지 반복합니다.
+        while n != 0:  # 지불을 선택하기 전까지 반복
             print()  # 줄 바꾸면서 
             n = int(input("추가 주문은 음료 번호를, 지불은 0을 누르세요 : "))  # 추가 주문 또는 지불
             if n > 0 and n < len(self.menu) + 1: 
@@ -67,7 +67,7 @@ class Kiosk:
             else :
                 if n == 0 :  # 지불을 입력하면
                     print("주문이 완료되었습니다.")
-                    print(self.order_menu, self.order_price)  # 확인을 위한 리스트를 출력합니다.
+                    print(self.order_menu, self.order_price)  # 확인을 위한 리스트를 출력
                 else :  # 없는 번호를 입력할 때
                     print("없는 메뉴입니다. 다시 주문해 주세요.")
 
